@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles.css";
 
 export default function App() {
@@ -40,14 +41,27 @@ const questions = [
       "What do we call an input element that is completely synchronised with state?",
     answer: "Controlled element",
   },
+
+  {
+    id: 2003,
+    question: "What are the three steps of using state?",
+    answer: "Define, use, update",
+  },
 ];
 
 function FlashCards() {
+  const [selectedId, setSelectedId] = useState(9103);
+
   return (
     <div className="flashcards">
       {questions.map((question) => (
-        <div>
-          <p>{question.question}</p>
+        <div
+          key={question.id}
+          className={question.id === selectedId ? "selected" : ""}
+        >
+          <p>
+            {question.id === selectedId ? question.answer : question.question}
+          </p>
         </div>
       ))}
     </div>
