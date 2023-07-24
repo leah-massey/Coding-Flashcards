@@ -88,6 +88,13 @@ const questions = [
     answer:
       "Application Programming Interface: a piece of software that can be used by another piece of software, in order to allow applications to talk to each other",
   },
+
+  {
+    id: 2008,
+    question: "What is Mongoose?",
+    answer:
+      "Mongoose is an Object Data Modelling library for MongoDB and Node.js, a higher level of abstraction.",
+  },
 ];
 
 function FlashCards() {
